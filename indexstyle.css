@@ -1,0 +1,130 @@
+:root {
+  --white: rgb(12, 47, 73); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+body {
+  background-image: url("meal\ planner.png");
+  background-size: 100%; /* Zoom out the background picture */
+  background-position: center; /* Center the background picture */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 20%; /* Adjust the padding to lower the background picture */
+}
+
+
+html {  
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #00072D;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 .1rem 1rem rgb(0, 0, 0);
+}
+
+header .logo {
+  font-size: 2rem;
+  color: #add6eb;
+  font-weight: bolder;
+  margin-left: 1rem; /* Added margin to push it to the left */
+}
+
+header .logo span {
+  color: var(--white);
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  margin-right: 4rem; /* Adjusting the gap between navbar links */
+  color: rgb(255, 255, 255); /* Keeping the color consistent */
+  font-size: 2rem; /* Adjusting font size */
+  font-weight: bold; /* Making font weight bold */
+}
+
+nav a:hover {
+  color: var(--white);
+}
+
+
+
+
+
+.tagline {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  color:#ffffff;
+  font-size: 7rem;
+  font-family: 'Rubik, Glitch' sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding a shadow for better visibility */
+}
+
+.buttons {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.buttons button {
+  margin: 0 10px; /* Adjust margin between buttons */
+  color: white;
+  font-size: 3rem; 
+  font-family: 'Rubik, Glitch', sans-serif;
+  text-shadow: 2px 2px 4px rgb(19, 48, 88); /* Adding a shadow for better visibility */
+  background-color: rgb(1, 22, 80); 
+  border: 2px solid rgb(1, 22, 80); 
+  border-radius: .3em;
+}
+
+.buttons button a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color from parent */
+}
+
+.buttons button:hover {
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .tagline {
+      font-size: 4rem; /* Adjust font size for smaller screens */
+  }
+
+  .buttons {
+      top: 70%; /* Adjust position of buttons for smaller screens */
+  }
+}
